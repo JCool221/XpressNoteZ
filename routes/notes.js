@@ -28,4 +28,10 @@ notes.post('/', (req,res) => {
 
 });
 
+notes.delete('/:id', (req, res) =>{
+    const id = req.params.id;
+    
+    console.log(`delete request received for ${id}`)
+})
+
 module.exports = notes;
