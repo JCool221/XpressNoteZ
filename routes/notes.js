@@ -30,8 +30,10 @@ notes.post('/', (req,res) => {
 
 notes.delete('/:id', (req, res) =>{
     const id = req.params.id;
-    
     console.log(`delete request received for ${id}`)
+    readFromFile('./db/db.json').then((data) => res.json(console.log(JSON.parse(data))));
+    // check for array point with id, probably need to loop through
+    // slice out that index, then readandappend it back
 })
 
 module.exports = notes;
