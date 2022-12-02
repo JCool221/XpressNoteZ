@@ -1,5 +1,5 @@
 const notes = require('express').Router();
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
+const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils');
 const { v4: uuidv4 } = require('uuid');
 
 
@@ -8,6 +8,7 @@ notes.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
+// POST route for adding new notes
 notes.post('/', (req,res) => {
     console.log(req.body);
 
@@ -25,15 +26,23 @@ notes.post('/', (req,res) => {
     } else {
         res.error('Error');
     }
-
 });
 
+
+// DELETE route for removing notes
 notes.delete('/:id', (req, res) =>{
     const id = req.params.id;
     console.log(`delete request received for ${id}`)
-    readFromFile('./db/db.json').then((data) => res.json(console.log(JSON.parse(data))));
-    // check for array point with id, probably need to loop through
-    // slice out that index, then readandappend it back
+    readFromFile('./db/db.json').then((data) => { 
+        let deleteReq = JSON.parse(data);
+
+        let dbPostDelete = deleteReq.filter(deleteReq => deleteReq.id !== id);
+        writeToFile('./db/db.json', dbPostDelete);
+        console.log(deleteReq);
+        // deleteReq.forEach(element => console.log(element.id, i));
+        res.json(deleteReq);
+    });
+
 })
 
 module.exports = notes;

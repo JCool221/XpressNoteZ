@@ -1,22 +1,7 @@
 [
     {
-        "title": "Still kinda working",
-        "text": "i guess",
-        "id": "4b9eb252-5b3e-49f7-b20d-843209dca0e4"
-    },
-    {
-        "title": "now to delete",
-        "text": "i  only kinda see how this should work",
-        "id": "7e725606-9da7-46d1-9d10-da207b79a5f6"
-    },
-    {
-        "title": "test",
-        "text": "supertest",
-        "id": "9294d6ad-a639-49e3-93b6-7aadb927b6c3"
-    },
-    {
-        "title": "test",
-        "text": "note wasn't working",
-        "id": "4c08a6ae-5c6a-47e3-92aa-fb56a119bd4b"
+        "title": "Sample note",
+        "text": "delete works!",
+        "id": "42a0d10c-636c-4c15-9e32-14b1ff5197fe"
     }
 ]
