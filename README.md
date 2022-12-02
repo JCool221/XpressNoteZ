@@ -22,6 +22,9 @@ https://sleepy-reaches-70743.herokuapp.com. It all runs on the site
 
 Press Get Started to get started.  Enter a note title and note text in the fields.  The disc icon saves the note to the list on the left.  You can click on a  note to highlight it, just click on the plus icon to return to taking a new note.  The red trashcan icon will delete the note.
 
+![Screenshot of deployed app](https://github.com/JCool221/XpressNoteZ/blob/main/helpers/screenshot/sleepy-reaches-70743.herokuapp.com_.png)
+![Screenshot of notes page](https://github.com/JCool221/XpressNoteZ/blob/main/helpers/screenshot/sleepy-reaches-70743.herokuapp.com_notes.png)
+
 <a name="Contributing"></a>
 ## Contributing
 
